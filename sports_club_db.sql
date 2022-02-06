@@ -1,15 +1,3 @@
-/*
- Navicat Premium Data Transfer
-
- Source Server         : mysql
- Source Server Type    : MySQL
- Source Server Version : 50714
- Source Host           : localhost:3306
- Source Schema         : sportsclub
-
- Target Server Type    : MySQL
-*/
-
 SET NAMES utf8mb4;
 SET FOREIGN_KEY_CHECKS = 0;
 
@@ -34,7 +22,7 @@ INSERT INTO `admin` VALUES ('admin2', 'admin2', 'admin2', 'Deputy Manager');
 
 
 
--- ----------------------------
+-- ---------------- ------------
 -- Table structure for log_users
 -- ----------------------------
 DROP TABLE IF EXISTS `log_users`;
@@ -66,8 +54,8 @@ INDEX `userid`(`userid`) USING BTREE
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('1529336794', 'Christiana Mayberry', 'Male', '3362013747', 'christiani@gmail.com', '1968-04-13', '2018-06-18');
-INSERT INTO `users` VALUES ('1529336795', 'Shreyansh Gupta', 'Male', '3362013747', 'shreyansh@gmail.com', '1998-12-12', '2020-06-10');
+INSERT INTO `users` VALUES ('1529336794', 'suresh', 'Male', '3362013747', 'suresh@gmail.com', '1968-04-13', '2018-06-18');
+INSERT INTO `users` VALUES ('1529336795', 'ajay', 'Male', '3362013747', 'ajay@gmail.com', '1998-12-12', '2020-06-10');
 
 
 -- ----------------------------
