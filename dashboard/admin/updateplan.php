@@ -14,11 +14,15 @@ page_protect();
 
    if(mysqli_query($con,$query1)){
      
-            echo "<html><head><script>alert('PLAN Updated Successfully');</script></head></html>";
+            echo "<html><head>
+	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
+<script>alert('PLAN Updated Successfully');</script></head></html>";
             echo "<meta http-equiv='refresh' content='0; url=view_plan.php'>";  
    }
    else{
-    echo "<html><head><script>alert('ERROR! Update Opertaion Unsucessfull');</script></head></html>";
+    echo "<html><head>
+	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
+<script>alert('ERROR! Update Opertaion Unsucessfull');</script></head></html>";
     echo "error".mysqli_error($con);
    }
     

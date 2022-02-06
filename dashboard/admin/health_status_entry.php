@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 require '../../include/db_conn.php';
 page_protect();
 
@@ -24,12 +24,16 @@ if(isset($_POST['submit'])){
 	$query="update health_status set calorie='".$calorie."', height='".$height."',weight='".$weight."',fat='".$fat."',remarks='".$remarks."' where uid='".$userid."'";
 
 	if(mysqli_query($con,$query)){
-		echo "<head><script>alert('Health Status Added ');</script></head></html>";
+		echo "<head>
+	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
+<script>alert('Health Status Added ');</script></head></html>";
         echo "<meta http-equiv='refresh' content='0; url=new_health_status.php'>";
 
 	}
 	else{
-	 echo "<head><script>alert('NOT SUCCESSFUL, Check Again');</script></head></html>";
+	 echo "<head>
+	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
+<script>alert('NOT SUCCESSFUL, Check Again');</script></head></html>";
 	 echo "error".mysqli_error($con);
 	 echo "<meta http-equiv='refresh' content='0; url=new_health_status.php'>";
         
@@ -61,6 +65,8 @@ else{
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
+
 
    <title>SPORTS CLUB | Health Status Entry</title>
   <link rel="stylesheet" href="../../css/style.css"  id="style-resource-5">
@@ -99,8 +105,8 @@ else{
 			
 			<!-- logo -->
 			<div class="logo">
-				<a href="main.php">
-					<img src="logo1.png" alt="" width="192" height="80" />
+				<a href="index.php">
+					<img src="../../images/logo.png" alt="" width="192" height="80" />
 				</a>
 			</div>
 			
@@ -235,7 +241,7 @@ else{
 		
 		
 		
-			<?php include('footer.php'); ?>
+			
     	</div>
 
     </body>

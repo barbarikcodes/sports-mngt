@@ -38,11 +38,15 @@ echo $query;
 
               $query5="insert into address(id,streetName,state,city,zipcode) values('$memID','$stname','$state','$city','$zipcode')";
               if(mysqli_query($con,$query5)==1){
-               echo "<head><script>alert('Member Added ');</script></head></html>";
+               echo "<head>
+	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
+<script>alert('Member Added ');</script></head></html>";
                echo "<meta http-equiv='refresh' content='0; url=new_entry.php'>";
               }
               else{
-                  echo "<head><script>alert('Member Added Failed');</script></head></html>";
+                  echo "<head>
+	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
+<script>alert('Member Added Failed');</script></head></html>";
                  echo "error: ".mysqli_error($con);
                  //Deleting record of users if inserting to enrolls_to table failed to execute
                  $query3 = "DELETE FROM users WHERE userid='$memID'";
@@ -51,7 +55,9 @@ echo $query;
             }
              
             else{
-               echo "<head><script>alert('Member Added Failed');</script></head></html>";
+               echo "<head>
+	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
+<script>alert('Member Added Failed');</script></head></html>";
               echo "error: ".mysqli_error($con);
                //Deleting record of users if inserting to enrolls_to table failed to execute
                 $query3 = "DELETE FROM users WHERE userid='$memID'";
@@ -60,7 +66,9 @@ echo $query;
             
           }
           else{
-            echo "<head><script>alert('Member Added Failed');</script></head></html>";
+            echo "<head>
+	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
+<script>alert('Member Added Failed');</script></head></html>";
             echo "error: ".mysqli_error($con);
             //Deleting record of users if inserting to enrolls_to table failed to execute
              $query3 = "DELETE FROM users WHERE userid='$memID'";
@@ -71,7 +79,9 @@ echo $query;
         }
         else
         {
-          echo "<head><script>alert('Member Added Failed');</script></head></html>";
+          echo "<head>
+	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
+<script>alert('Member Added Failed');</script></head></html>";
           echo "error: ".mysqli_error($con);
            //Deleting record of users if retrieving inf of plan failed
           $query3 = "DELETE FROM users WHERE userid='$memID'";
@@ -80,7 +90,9 @@ echo $query;
 
     }
     else{
-        echo "<head><script>alert('Member Added Failed');</script></head></html>";
+        echo "<head>
+	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
+<script>alert('Member Added Failed');</script></head></html>";
         echo "error: ".mysqli_error($con);
       }
 ?>

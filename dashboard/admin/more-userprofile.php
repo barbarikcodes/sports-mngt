@@ -10,12 +10,16 @@ if(isset($_POST['submit'])){
   $query="update admin set username='".$usrname."',Full_name='".$fulname."' where username='".$_SESSION['full_name']."'";
 
   if(mysqli_query($con,$query)){
-  	echo "<head><script>alert('Profile Change ');</script></head></html>";
+  	echo "<head>
+	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
+<script>alert('Profile Change ');</script></head></html>";
 
      echo "<meta http-equiv='refresh' content='0; url=logout.php'>";
   }
   else{
-  	echo "<head><script>alert('NOT SUCCESSFUL, Check Again');</script></head></html>";
+  	echo "<head>
+	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
+<script>alert('NOT SUCCESSFUL, Check Again');</script></head></html>";
 	 echo "error".mysqli_error($con);
   }
 
@@ -27,6 +31,8 @@ if(isset($_POST['submit'])){
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
+
 
     <title>SPORTS CLUB  | Admin</title>
     <link rel="stylesheet" href="../../css/style.css"  id="style-resource-5">
@@ -53,8 +59,8 @@ if(isset($_POST['submit'])){
 			
 			<!-- logo -->
 			<div class="logo">
-				<a href="main.php">
-					<img src="logo1.png" alt="" width="192" height="80" />
+				<a href="index.php">
+					<img src="../../images/logo.png" alt="" width="192" height="80" />
 				</a>
 			</div>
 			
@@ -154,7 +160,7 @@ if(isset($_POST['submit'])){
 		
 		
 
-			<?php include('footer.php'); ?>
+			
 
     	</div>
 

@@ -1,4 +1,4 @@
-﻿<?php
+h<?php
 require '../../include/db_conn.php';
 page_protect();
 ?>
@@ -7,6 +7,8 @@ page_protect();
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
+
 
     <title>SPORTS CLUB  | View Member</title>
    <link rel="stylesheet" href="../../css/style.css"  id="style-resource-5">
@@ -39,8 +41,8 @@ page_protect();
 			
 			<!-- logo -->
 			<div class="logo">
-				<a href="main.php">
-					<img src="logo1.png" alt="" width="192" height="80" />
+				<a href="index.php">
+					<img src="../../images/logo.png" alt="" width="192" height="80" />
 				</a>
 			</div>
 			
@@ -176,7 +178,7 @@ page_protect();
 
 </script>
 		
-			<?php include('footer.php'); ?>
+			
     	</div>
 
     </body>

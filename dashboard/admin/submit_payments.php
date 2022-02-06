@@ -22,18 +22,24 @@ $query="update enrolls_to set renewal='no' where uid='$memID'";
           $query2="insert into enrolls_to(pid,uid,paid_date,expire,renewal) values('$plan','$memID','$cdate','$expiredate','yes')";
           if(mysqli_query($con,$query2)==1){
 
-               echo "<head><script>alert('Payment Successfully update ');</script></head></html>";
+               echo "<head>
+	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
+<script>alert('Payment Successfully update ');</script></head></html>";
                echo "<meta http-equiv='refresh' content='0; url=payments.php'>";
             }
              
             else{
-               echo "<head><script>alert('Payment update Failed');</script></head></html>";
+               echo "<head>
+	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
+<script>alert('Payment update Failed');</script></head></html>";
               echo "error: ".mysqli_error($con);
             }
             
           }
           else{
-            echo "<head><script>alert('Payment update Failed');</script></head></html>";
+            echo "<head>
+	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
+<script>alert('Payment update Failed');</script></head></html>";
             echo "error: ".mysqli_error($con);
           }
 
@@ -41,7 +47,9 @@ $query="update enrolls_to set renewal='no' where uid='$memID'";
         }
         else
         {
-          echo "<head><script>alert('Payment update Failed');</script></head></html>";
+          echo "<head>
+	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
+<script>alert('Payment update Failed');</script></head></html>";
           echo "error: ".mysqli_error($con);
         }
 

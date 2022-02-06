@@ -20,6 +20,8 @@ $uid=$_GET['id'];
 <!doctype html>
 <html>
 <head>
+	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
+
 <meta charset="utf-8">
 <title>SPORTS CLUB</title>
 <style>
@@ -55,7 +57,7 @@ line-height:0.5cm;
 							
 <table id =space width="760" height="397" border="0" align="center">
   <tr>
-    <td width="222" height="198"><img src="logo1.png" width="114" height="115"  alt=""/></td>
+    <td width="222" height="198"><img src="../../images/logo.png" width="114" height="115"  alt=""/></td>
     <td width="317"><p><strong>TITAN GYM</strong></p>
       <p>Sotai Chenijan,</p>
       <p>Jorhat</p></td>

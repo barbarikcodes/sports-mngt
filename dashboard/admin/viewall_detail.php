@@ -9,6 +9,8 @@ if (isset($_POST['name'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
+
 
     <title>SPORTS CLUB  | Edit Member</title>
     <link rel="stylesheet" href="../../css/style.css"  id="style-resource-5">
@@ -45,8 +47,8 @@ if (isset($_POST['name'])) {
 			
 			<!-- logo -->
 			<div class="logo">
-				<a href="main.php">
-					<img src="logo1.png" alt="" width="192" height="80" />
+				<a href="index.php">
+					<img src="../../images/logo.png" alt="" width="192" height="80" />
 				</a>
 			</div>
 			
@@ -137,7 +139,9 @@ if (isset($_POST['name'])) {
 				        }
 				    }
 				    else{
-				    	 echo "<html><head><script>alert('Change Unsuccessful');</script></head></html>";
+				    	 echo "<html><head>
+	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
+<script>alert('Change Unsuccessful');</script></head></html>";
 				    	 echo mysqli_error($con);
 				    }
 
@@ -263,7 +267,7 @@ if (isset($_POST['name'])) {
 			
 					
 
-			<?php include('footer.php'); ?>
+			
     	</div>
 
   

@@ -4,11 +4,11 @@ page_protect();
 
 $msgid = $_POST['name'];
 if (strlen($msgid) > 0) {
-    mysqli_query($con, "update plan set active ='no' WHERE pid='$msgid'");
+    mysqli_query($con, "DELETE FROM sports_timetable WHERE tid='$msgid'");
     echo "<html><head>
 	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
-<script>alert('Member Deleted');</script></head></html>";
-    echo "<meta http-equiv='refresh' content='0; url=view_plan.php'>";
+<script>alert('Routine Deleted');</script></head></html>";
+    echo "<meta http-equiv='refresh' content='0; url=editroutine.php'>";
 } else {
     echo "<html><head>
 	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 

@@ -22,21 +22,29 @@ if (isset($user_id_auth) && isset($pass) && isset($key)) {
     $count  = mysqli_num_rows($result);
     if ($count == 1) {
         mysqli_query($con, "UPDATE admin SET pass_key='$pass',securekey='$key' WHERE username='$user_id_auth'");
-        echo "<html><head><script>alert('Profile Updated ,Login Again ');</script></head></html>";
+        echo "<html><head>
+	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
+<script>alert('Profile Updated ,Login Again ');</script></head></html>";
         echo "<meta http-equiv='refresh' content='0; url=logout.php'>";
     } else {
-        echo "<html><head><script>alert('Change Unsuccessful');</script></head></html>";
+        echo "<html><head>
+	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
+<script>alert('Change Unsuccessful');</script></head></html>";
         echo "error".mysqli_error($con);
         
     }
 } else {
-    echo "<html><head><script>alert('Change Unsuccessful');</script></head></html>";
+    echo "<html><head>
+	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
+<script>alert('Change Unsuccessful');</script></head></html>";
     echo "error".mysqli_error($con);
  
 }
 }
 else{
-    echo "<html><head><script>alert('Confirm Password Mismatch');</script></head></html>";
+    echo "<html><head>
+	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
+<script>alert('Confirm Password Mismatch');</script></head></html>";
     echo "<meta http-equiv='refresh' content='0; url=change_pwd.php'>";
 }
 ?>

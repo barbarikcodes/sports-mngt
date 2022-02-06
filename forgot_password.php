@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
+
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
     
@@ -9,7 +11,7 @@
     <meta name="author" content="Laborator.co" />
     
     <title>Sports Club | Login</title>
-    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/style1.css"/>
 	<link rel="stylesheet" type="text/css" href="./css/entypo.css">
 
 </head>

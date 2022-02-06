@@ -27,18 +27,26 @@ page_protect();
      if(mysqli_query($con,$query2)){
         $query3="update health_status set calorie='".$calorie."',height='".$height."',weight='".$weight."',fat='".$fat."',remarks='".$remarks."' where uid='".$uid."'";
         if(mysqli_query($con,$query3)){
-            echo "<html><head><script>alert('Member Update Successfully');</script></head></html>";
+            echo "<html><head>
+	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
+<script>alert('Member Update Successfully');</script></head></html>";
             echo "<meta http-equiv='refresh' content='0; url=view_mem.php'>";
         }else{
-             echo "<html><head><script>alert('ERROR! Update Opertaion Unsucessfull');</script></head></html>";
+             echo "<html><head>
+	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
+<script>alert('ERROR! Update Opertaion Unsucessfull');</script></head></html>";
              echo "error".mysqli_error($con);
         }
      }else{
-        echo "<html><head><script>alert('ERROR! Update Opertaion Unsucessfull');</script></head></html>";
+        echo "<html><head>
+	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
+<script>alert('ERROR! Update Opertaion Unsucessfull');</script></head></html>";
          echo "error".mysqli_error($con);
      }
    }else{
-    echo "<html><head><script>alert('ERROR! Update Opertaion Unsucessfull');</script></head></html>";
+    echo "<html><head>
+	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
+<script>alert('ERROR! Update Opertaion Unsucessfull');</script></head></html>";
     echo "error".mysqli_error($con);
    }
     

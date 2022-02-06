@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 require '../../include/db_conn.php';
 $month=$_GET['mm'];
 $year=$_GET['yy'];
