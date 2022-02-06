@@ -39,7 +39,6 @@ INSERT INTO `admin` VALUES ('admin2', 'admin2', 'admin2', 'Deputy Manager');
 -- ----------------------------
 DROP TABLE IF EXISTS `log_users`;
 CREATE TABLE `log_users` (
-`id` int(11) NOT NULL,
 `users_userid` int(11) NOT NULL,
 `action` varchar(20) NOT NULL,
 `cdate` datetime NOT NULL
@@ -128,7 +127,7 @@ INSERT INTO `plan` VALUES ('BOQKJB', 'Badminton Plan', 'A monthly subscription t
 DROP TABLE IF EXISTS `enrolls_to`;
 CREATE TABLE `enrolls_to` (
 `et_id` int(5) NOT NULL AUTO_INCREMENT,
-`pid` varchar(8) ,
+`pid` varchar(8),
 `uid` varchar(20),
 `paid_date` varchar(15),
 `expire` varchar(15),
@@ -144,27 +143,6 @@ CONSTRAINT `user_ID` FOREIGN KEY (`uid`) REFERENCES `users` (`userid`) ON DELETE
 -- Records of enrolls_to
 -- ----------------------------
 INSERT INTO `enrolls_to` VALUES (1, 'FOQKJF', '1529336794', '2018-06-18', '2018-07-18', 'yes');
-
-
-
-
--- ----------------------------
--- Table structure for timetable
--- ----------------------------
-DROP TABLE IF EXISTS `sports_timetable`;
-CREATE TABLE `sports_timetable` (
-`tid` int(12) NOT NULL AUTO_INCREMENT,
-`tname` varchar(45),
-`day1` varchar(200),
-`day2` varchar(200),
-`day3` varchar(200),
-`day4` varchar(200),
-`day5` varchar(200),
-`day6` varchar(200),
-`pid` varchar(8),
-PRIMARY KEY (`tid`) USING BTREE,
-CONSTRAINT `pID` FOREIGN KEY (`pid`) REFERENCES `plan` (`pid`) ON DELETE CASCADE ON UPDATE NO ACTION
-)ENGINE = InnoDB CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
 
 
 

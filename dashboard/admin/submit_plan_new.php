@@ -1,8 +1,8 @@
 <?php
-require '../../include/db_conn.php';
-page_protect();
+	require '../../include/db_conn.php';
+	page_protect();
 
-	$planid =$_POST['planid'];
+    $planid =$_POST['planid'];
     $name = $_POST['planname'];
     $desc = $_POST['desc'];
     $planval = $_POST['planval'];
@@ -10,23 +10,22 @@ page_protect();
     
    //Inserting data into plan table
     $query="insert into plan(pid,planName,description,validity,amount,active) values('$planid','$name','$desc','$planval','$amount','yes')";
-   
-   
 
-	 if(mysqli_query($con,$query)==1){
-        
-        echo "<head>
-	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
-<script>alert('PLAN Added ');</script></head></html>";
-        echo "<meta http-equiv='refresh' content='0; url=new_plan.php'>";
-       
-      }
-
-    else{
-        echo "<head>
-	<link rel='icon' href='../..//favicon.ico' type='image/x-icon'> 
-<script>alert('NOT SUCCESSFUL, Check Again');</script></head></html>";
-        echo "error".mysqli_error($con);
-      }
-
+	try{
+		if(mysqli_query($con,$query)==1){  
+			echo "<head> 
+			<script>alert('PLAN Added ');</script></head></html>";
+			echo "<meta http-equiv='refresh' content='0; url=new_plan.php'>";
+		}
+		else{
+			echo "<head>
+			<script>alert('NOT SUCCESSFUL, Check Again');</script></head></html>";
+			echo "error".mysqli_error($con);
+		}
+	}
+	catch(Exception $e){
+		echo "<head> 
+			<script>alert('Duplicate entry of same plan');</script></head></html>";
+			echo "<meta http-equiv='refresh' content='0; url=new_plan.php'>";
+	}
 ?>
